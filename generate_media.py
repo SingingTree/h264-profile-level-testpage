@@ -44,4 +44,4 @@ levels = [
 for profile in profiles:
     for level in levels:
         # Encode the first 5 seconds of the input using different profiles and levels.
-        subprocess.call(["ffmpeg", "-i", sys.argv[1], "-t", "5", "-profile:v", profile, "-level:v", level, "-c:a", "copy", "{}-{}.mp4".format(profile, level)])
+        subprocess.call(["ffmpeg", "-i", sys.argv[1], "-t", "5", "-profile:v", profile, "-level:v", level, "-an", "{}-{}.mp4".format(profile, level)])
